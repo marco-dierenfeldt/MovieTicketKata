@@ -3,7 +3,7 @@ package de.saxsys.dojo.ticketkata;
 /**
  * Interface for the coding dojo TicketKata
  *
- * @author x9dfd
+ * @author Marco Dierenfeldt
  * @version 0.1
  */
 public interface TicketKataInterface {
