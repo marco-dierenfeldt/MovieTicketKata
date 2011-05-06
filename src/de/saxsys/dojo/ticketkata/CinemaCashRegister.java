@@ -4,21 +4,23 @@ package de.saxsys.dojo.ticketkata;
  * Cashregister implementation that is able to support the salesprocess of
  * multiple tickets for a movie as defined in the
  * <code>TicketKataInterface</code>.
+ * <table width="500px" border="1">
+ * <tr>
+ *  <th colspan="2" align ="left" bgcolor="#CCCCFF">Basic admission rates (regular weekday, 2D movie, &lt;=120 min, parquet)</th>
+ * </tr>
+ * <tr><td>General admission</td><td>$11.00</td></tr>
+ * <tr><td>Students</td><td>$8.00</td></tr>
+ * <tr><td>Senior Citizens (65 & older)</td><td>$6.00</td></tr>
+ * <tr><td>Children (under 13)</td><td>$5.50</td></tr>
+ * <tr><td>Group (20 people or more)</td><td>$6.00 each</td></tr>
  *
- * Basic admission rates (regular weekday, 2D movie, &lt;=120 min, parquet)
- * General admission 	                      $11.00
- * Students                                   $8.00
- * Senior Citizens (65 & older) 	      $6.00
- * Children (under 13)                        $5.50
- * Group (20 people or more)                  $6.00 each
- *
- * Exceptions *******************************************
- * 3D movie                                  +$3.00
- * Over-length (more than 120 min.)          +$1.50
- * Movie Day (Thurdsday, except for groups!) -$2.00
- * Weekends                                  +$1.50
- * Loge                                      +$2.00
- *
+ * <tr><th colspan="2" align="left" bgcolor="#CCCCFF">Exceptions</th></tr>
+ * <tr><td>3D movie</td><td>+$3.00</td></tr>
+ * <tr><td>Over-length (more than 120 min.)</td><td>+$1.50</td></tr>
+ * <tr><td>Movie Day (Thurdsday, except for groups!)</td><td>-$2.00</td></tr>
+ * <tr><td>Weekends</td><td>+$1.50</td></tr>
+ * <tr><td>Loge</td><td>+$2.00</td></tr>
+ * </table>
  * @author Marco Dierenfeldt
  * @version 0.1
  * @see TicketKataInterface

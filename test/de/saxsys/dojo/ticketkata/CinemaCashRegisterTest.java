@@ -412,7 +412,7 @@ public class CinemaCashRegisterTest {
 
     @Test
     public void testPurchaseMix() {
-        System.out.println("testPurchaseTooSmallSchoolclassWithTwoTeachers");
+        System.out.println("testPurchaseMix");
         int runtime = 125;
         Day day = Day.THU;
         boolean isParquet = false;
@@ -444,5 +444,34 @@ public class CinemaCashRegisterTest {
         assertEquals(expResult, result, 0.0);
     }
 
+    /*
+     * Tests the re-initialisation in the startPurchase method
+     */
+    @Test
+    public void testMultipleTransactionsWitheSameCinemaCashRegister(){
+        System.out.println("testMultipleTransactionsWitheSameCinemaCashRegister");
+        int runtime = 90;
+        Day day = Day.MON;
+        boolean isParquet = true;
+        boolean is3D = true;
+        int age = 35;
+        boolean isStudent = false;
 
+        float expResult = 70.00F;
+
+        CinemaCashRegister instance = new CinemaCashRegister();
+        instance.startPurchase(runtime, day, isParquet, is3D);
+        for (int i = 0; i < 5; i++) {
+            instance.addTicket(age, isStudent);
+        }
+        float result = instance.finishPurchase();
+        assertEquals(expResult,result,0.0f);
+
+        instance.startPurchase(runtime, day, isParquet, is3D);
+        for (int i = 0; i < 5; i++) {
+            instance.addTicket(age, isStudent);
+        }
+        result = instance.finishPurchase();
+        assertEquals(expResult,result,0.0f);
+    }
 }
